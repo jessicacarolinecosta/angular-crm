@@ -1,0 +1,12 @@
+<div class="custom-slider" [ngClass]="{'slider-inputs': inputs}">
+  <div class="inputs" *ngIf="inputs">
+    <div>
+      <input class="app-input" name="min-value" [(ngModel)]="minValue">
+    </div>
+    <div class="text-center" [translate]="'comum.to'"></div>
+    <div>
+      <input class="app-input" name="max-value" [(ngModel)]="maxValue">
+    </div>
+  </div>
+  <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
+</div>

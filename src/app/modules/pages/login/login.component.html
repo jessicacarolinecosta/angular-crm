@@ -1,0 +1,24 @@
+<section class="main container flex">
+    <mat-card class="grid-lg-4 grid-md-4 grid-sm-5 grid-xs-12">
+        <h3 class="text-center" [translate]="'login.login'"></h3>
+        
+        <div class="inputs-area">
+            <p><span [translate]="'login.user'"></span><input type="text" class="app-input"></p>
+            <p><span [translate]="'login.password'"></span><input type="password" class="app-input"></p>
+        </div>
+        
+        <div class="utils-area">
+            <span>
+                <input type="checkbox">
+                <span [translate]="'login.remember-me'"></span>
+            </span>
+            <a href="#" [translate]="'login.forgot-password'"></a>
+        </div>
+
+        <button mat-raised-button color="primary"><span [translate]="'login.signin'"></span></button>
+
+        <p class="text-center">
+            <a href="#" [translate]="'login.new-member-disclaimer'"></a>
+        </p>
+    </mat-card>
+</section>

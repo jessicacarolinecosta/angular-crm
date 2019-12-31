@@ -1,0 +1,14 @@
+{
+    "login": {
+        "login": "Login",
+        "user": "Usuário",
+        "password": "Senha",
+        "signin": "Entrar",
+        "remember-me": "Lembrar-me",
+        "forgot-password": "Recuperar senha",
+        "new-member-disclaimer": "Não possui uma conta? Clique aqui"
+    },
+    "comum": {
+        "copyright": "Desenvolvido por: Jéssica Costa"
+    }
+}

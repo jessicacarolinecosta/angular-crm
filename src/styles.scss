@@ -1,0 +1,146 @@
+@import 'variables.scss';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/* FONTS */
+
+$fa-font-path: "../node_modules/font-awesome/fonts";
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/roboto-v19-latin-regular.eot'); /* IE9 Compat Modes */
+    src: url('assets/fonts/roboto-v19-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('assets/fonts/roboto-v19-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('assets/fonts/roboto-v19-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('assets/fonts/roboto-v19-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('assets/fonts/roboto-v19-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
+}
+
+/* MIXIN */
+
+@mixin button-shadows($color) {
+    -webkit-box-shadow: 0px 0px 5px 0px $color;
+    -moz-box-shadow: 0px 0px 5px 0px $color;
+    box-shadow: 0px 0px 5px 0px $color;
+}
+
+/* COMMON */
+
+body {
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: $text-color;
+
+    .container {
+        padding: 0 70px;
+    }
+
+    a {
+        color: $text-color;
+    }
+    .flex {
+        display: flex;
+    }
+
+    section {
+        min-height: 90vh;
+    }
+
+    .btn {
+        padding: .375rem .75rem;
+
+        &.btn-outline-primary {
+            border-radius: 5px;
+            border: 1px solid $primary-color;
+            color: $primary-color;
+            transition: all 0.5s;
+
+            &:hover {
+                background-color: $primary-color;
+                color: $light-color;
+                @include button-shadows(rgba(117,109,231,0.38));
+            }
+        }
+    }
+}
+
+/* MARGINS */
+@for $i from 1 through $mt-max{ 
+    .mt-#{$i} {
+      margin-top: #{$i}px;
+    }
+}
+
+/* PADDINGS */
+
+.p-0 {
+    padding: 0px !important;
+}
+
+/* GRID */
+
+[class*="grid-"] {
+    float: left;
+    padding: 0 $grid-gutter;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+@for $i from 1 through $grid-columns{ 
+    .grid-xs-#{$i} {
+        width: 100% / $grid-columns * $i;
+    }
+}
+
+@for $i from 1 through $grid-columns{ 
+    .grid-sm-#{$i} {
+        @media (min-width: $screen-sm-min) {
+            width: 100% / $grid-columns * $i;
+        }
+    }
+}
+
+@for $i from 1 through $grid-columns{ 
+    .grid-md-#{$i} {
+        @media (min-width: $screen-md-min) {
+            width: 100% / $grid-columns * $i;
+        }
+    }
+}
+
+@for $i from 1 through $grid-columns{ 
+    .grid-lg-#{$i} {
+        @media (min-width: $screen-lg-min) {
+            width: 100% / $grid-columns * $i;
+        }
+    }
+}
+
+/* INPUTS */
+
+.app-input {
+    height: 35px;
+    font-size: 14px;
+    font-weight: normal;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    position: relative;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0px 10px;
+    margin: 0px 0px 5px 0px;
+    z-index: 1;
+
+    &.lg {
+        width: 100%;
+    }
+}
+
+.text-center {
+    text-align: center;
+}

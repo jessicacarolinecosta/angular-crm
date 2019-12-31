@@ -1,0 +1,3 @@
+<mat-chip-list aria-label="Circles Select">
+  <mat-chip *ngFor="let item of items; let i = index" color="{{color ? color : 'primary'}}" [ngClass]="{'mat-chip-selected': item.selected}" (click)="item.selected = !item.selected;changeFunction()">{{item.name}}</mat-chip>
+</mat-chip-list>
