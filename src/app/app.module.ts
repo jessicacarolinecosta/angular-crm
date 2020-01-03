@@ -10,6 +10,8 @@ import ptBr from '@angular/common/locales/pt';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule, MatCheckboxModule, MatInput, MatInputModule, MatButtonToggleModule, MatChipsModule } from '@angular/material';
 import { MatButtonModule } from '@angular/material';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material';
 import { Ng5SliderModule } from 'ng5-slider';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -18,6 +20,8 @@ import { LoginComponent } from './modules/pages/login/login.component';
 import { SliderComponent } from './modules/comum/slider/slider.component';
 import { SelectCirclesComponent } from './modules/comum/select-circles/select-circles.component';
 import { SelectToggleComponent } from './modules/comum/select-toggle/select-toggle.component';
+import { MenuComponent } from './modules/comum/menu/menu.component';
+import { DashboardComponent } from './modules/pages/dashboard/dashboard.component';
 
 registerLocaleData(ptBr);
 
@@ -32,7 +36,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     LoginComponent,
     SliderComponent,
     SelectCirclesComponent,
-    SelectToggleComponent
+    SelectToggleComponent,
+    MenuComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +59,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatButtonToggleModule,
     MatButtonModule,
     MatChipsModule,
+    MatSidenavModule,
+    MatListModule,
     Ng5SliderModule
   ],
   providers: [

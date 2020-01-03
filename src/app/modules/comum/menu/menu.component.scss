@@ -1,0 +1,54 @@
+@import '../../../../variables.scss';
+
+mat-sidenav-container, mat-sidenav-content, mat-sidenav {
+    height: 100%;
+}
+ 
+mat-sidenav {
+    width: 180px;
+}
+
+nav {
+    background-color: $primary-color;
+
+    .logo {
+        width: 160px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        img {
+            width: 100px;
+        }
+
+        button {
+            width: 10px;
+        }
+
+        em {
+            color: $light-color;
+        }
+    }
+}
+ 
+main {
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+ 
+a:hover, a:active{
+    color: lightgray;
+}
+ 
+.nav-caption{
+    display: inline-block;
+    padding-left: 6px;
+}
+
+em {
+    margin-right: 10px;
+}

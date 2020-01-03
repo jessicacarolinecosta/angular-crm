@@ -1,0 +1,24 @@
+<nav>
+  <div class="logo">
+    <img [src]="'assets/img/logo-white.png'" alt="Houser">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <em class="fa fa-bars"></em>
+    </button>
+  </div>
+</nav>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dashboard" (click)="onSidenavClose()">
+        <em class="fa fa-bar-chart"></em> Dashboard
+      </a>
+      
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p>Conteudo</p>
+    <p>Conteudo</p>
+    <p>Conteudo</p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
