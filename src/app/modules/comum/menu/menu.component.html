@@ -10,9 +10,15 @@
   <mat-sidenav #sidenav mode="side" [(opened)]="opened">
     <mat-nav-list>
       <a mat-list-item routerLink="/dashboard" (click)="onSidenavClose()">
-        <em class="fa fa-bar-chart"></em> Dashboard
+        <em class="fa fa-bar-chart"></em><span [translate]="'menu.dashboard'"></span>
       </a>
-      
+      <a mat-list-item [matMenuTriggerFor]="leads">
+        <em class="fa fa-users"></em><span [translate]="'menu.leads'"></span>
+      </a>
+      <mat-menu #leads="matMenu" xPosition="before">
+        <button mat-menu-item><span [translate]="'menu.list'"></span></button>
+        <button mat-menu-item><span [translate]="'menu.new'"></span></button>
+      </mat-menu>
     </mat-nav-list>
   </mat-sidenav>
 

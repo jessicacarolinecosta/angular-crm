@@ -12,6 +12,7 @@ import { MatCardModule, MatCheckboxModule, MatInput, MatInputModule, MatButtonTo
 import { MatButtonModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material';
+import { MatMenuModule } from '@angular/material';
 import { Ng5SliderModule } from 'ng5-slider';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -61,6 +62,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatChipsModule,
     MatSidenavModule,
     MatListModule,
+    MatMenuModule,
     Ng5SliderModule
   ],
   providers: [

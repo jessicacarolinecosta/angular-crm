@@ -8,6 +8,12 @@
         "forgot-password": "Recuperar senha",
         "new-member-disclaimer": "Não possui uma conta? Clique aqui"
     },
+    "menu": {
+        "dashboard": "Dashboard",
+        "leads": "Leads",
+        "list": "Lista",
+        "new": "Novo"
+    },
     "comum": {
         "copyright": "Desenvolvido por: Jéssica Costa"
     }
