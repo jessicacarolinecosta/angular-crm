@@ -14,6 +14,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material';
 import { MatMenuModule } from '@angular/material';
 import { MatFormFieldModule } from '@angular/material';
+import { MatTableModule } from '@angular/material';
+import { MatSortModule } from '@angular/material';
+import { MatPaginatorModule } from '@angular/material';
 import { Ng5SliderModule } from 'ng5-slider';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -27,6 +30,7 @@ import { DashboardComponent } from './modules/pages/dashboard/dashboard.componen
 import { HeaderComponent } from './modules/comum/header/header.component';
 import { LeadsFormComponent } from './modules/pages/leads/leads-form/leads-form.component';
 import { BackButtonDirective } from './modules/comum/back-button/back-button.directive';
+import { LeadsListComponent } from './modules/pages/leads/leads-list/leads-list.component';
 
 registerLocaleData(ptBr);
 
@@ -46,7 +50,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     DashboardComponent,
     HeaderComponent,
     LeadsFormComponent,
-    BackButtonDirective
+    BackButtonDirective,
+    LeadsListComponent
   ],
   imports: [
     BrowserModule,
@@ -71,6 +76,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatListModule,
     MatMenuModule,
     MatFormFieldModule,
+    MatTableModule,
+    MatSortModule,
+    MatPaginatorModule,
     Ng5SliderModule,
     FormsModule,
     ReactiveFormsModule

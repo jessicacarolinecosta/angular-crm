@@ -19,15 +19,20 @@
         "cancel": "Cancelar",
         "save": "Salvar",
         "field-required": "Campo obrigatório",
-        "email-not-valid": "Email inválido"
+        "email-not-valid": "Email inválido",
+        "search-dots": "Buscar...",
+        "new": "Novo"
     },
     "leads": {
         "add-lead": "Adicionar Leads",
+        "lead-list": "Lista de Leads",
+        "id": "Cód",
         "name": "Nome",
         "email": "Email",
         "phone": "Telefone",
         "state": "Estado",
         "city": "Cidade",
-        "obs": "Observações"
+        "obs": "Observações",
+        "new-lead": "Novo lead"
     }
 }

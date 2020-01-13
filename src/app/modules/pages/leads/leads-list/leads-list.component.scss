@@ -1,0 +1,21 @@
+table {
+    width: 100%;
+}
+
+th.mat-sort-header-sorted {
+    color: black;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.title-holder {
+    display: flex;
+    justify-content: space-between;
+    place-items: center;
+}
+
+em{
+    margin-right: 10px;
+}
