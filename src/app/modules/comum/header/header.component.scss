@@ -1,0 +1,24 @@
+@import '../../../../variables.scss';
+
+nav {
+    background-color: $primary-color;
+
+    .logo {
+        width: 160px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+
+        img {
+            width: 100px;
+        }
+
+        button {
+            width: 10px;
+        }
+
+        em {
+            color: $light-color;
+        }
+    }
+}

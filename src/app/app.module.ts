@@ -23,6 +23,7 @@ import { SelectCirclesComponent } from './modules/comum/select-circles/select-ci
 import { SelectToggleComponent } from './modules/comum/select-toggle/select-toggle.component';
 import { MenuComponent } from './modules/comum/menu/menu.component';
 import { DashboardComponent } from './modules/pages/dashboard/dashboard.component';
+import { HeaderComponent } from './modules/comum/header/header.component';
 
 registerLocaleData(ptBr);
 
@@ -39,7 +40,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     SelectCirclesComponent,
     SelectToggleComponent,
     MenuComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

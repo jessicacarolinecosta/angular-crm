@@ -1,12 +1,12 @@
-<header class="flex container" *ngIf="false">
-  <figure>
-    <img [src]="'assets/img/logo.png'" alt="Houser">
-  </figure>
-</header>
-
-<body>
-  <router-outlet></router-outlet>
-</body>
+<app-header (sidenavToggle)="opened=!opened"></app-header>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
 <footer class="flex container" *ngIf="false">
   <p [translate]="'comum.copyright'"></p>
