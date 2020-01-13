@@ -1,0 +1,57 @@
+<mat-card class="grid-lg-12">
+  <h2 [translate]="'leads.add-lead'"></h2>
+  <form [formGroup]="leadsForm" (ngSubmit)="onSubmit()">
+    <div class="grid-lg-12">
+      <mat-form-field appearance="outline">
+        <mat-label [translate]="'leads.name'"></mat-label>
+        <input matInput type="text" formControlName="name" placeholder="{{'leads.name' | translate}}">
+        <mat-error *ngIf="submitted && f.name.errors">
+          <span [translate]="'comum.field-required'"></span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="grid-lg-6 grid-xs-12">
+      <mat-form-field appearance="outline">
+        <mat-label [translate]="'leads.email'"></mat-label>
+        <input matInput type="email" formControlName="email" placeholder="{{'leads.email' | translate}}">
+        <mat-error *ngIf="submitted && f.email.errors">
+          <span *ngIf="f.email.errors.required" [translate]="'comum.field-required'"></span>
+          <span *ngIf="f.email.errors.email" [translate]="'comum.email-not-valid'"></span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="grid-lg-6 grid-xs-12">
+      <mat-form-field appearance="outline">
+        <mat-label [translate]="'leads.phone'"></mat-label>
+        <input matInput type="number" formControlName="phone" placeholder="{{'leads.phone' | translate}}">
+        <mat-error *ngIf="submitted && f.phone.errors">
+          <span [translate]="'comum.field-required'"></span>
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="grid-lg-6 grid-xs-12">
+      <mat-form-field appearance="outline">
+        <mat-label [translate]="'leads.state'"></mat-label>
+        <input matInput type="text" placeholder="{{'leads.state' | translate}}">
+      </mat-form-field>
+    </div>
+    <div class="grid-lg-6 grid-xs-12">
+      <mat-form-field appearance="outline">
+        <mat-label [translate]="'leads.city'"></mat-label>
+        <input matInput type="text" placeholder="{{'leads.city' | translate}}">
+      </mat-form-field>
+    </div>
+    <div class="grid-lg-12">
+      <mat-form-field appearance="outline">
+        <mat-label [translate]="'leads.obs'"></mat-label>
+        <textarea matInput placeholder="{{'leads.obs' | translate}}"></textarea>
+      </mat-form-field>
+    </div>
+    <div class="grid-lg-6">
+      <button appBackButton mat-raised-button color="secondary"><span [translate]="'comum.cancel'"></span></button>
+    </div>
+    <div class="grid-lg-6">
+      <button mat-raised-button color="primary"><span [translate]="'comum.save'"></span></button>
+    </div>
+  </form>
+</mat-card>

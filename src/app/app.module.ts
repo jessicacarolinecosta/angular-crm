@@ -3,7 +3,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { registerLocaleData } from '@angular/common';
 import ptBr from '@angular/common/locales/pt';
@@ -13,6 +13,7 @@ import { MatButtonModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material';
 import { MatMenuModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material';
 import { Ng5SliderModule } from 'ng5-slider';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +25,8 @@ import { SelectToggleComponent } from './modules/comum/select-toggle/select-togg
 import { MenuComponent } from './modules/comum/menu/menu.component';
 import { DashboardComponent } from './modules/pages/dashboard/dashboard.component';
 import { HeaderComponent } from './modules/comum/header/header.component';
+import { LeadsFormComponent } from './modules/pages/leads/leads-form/leads-form.component';
+import { BackButtonDirective } from './modules/comum/back-button/back-button.directive';
 
 registerLocaleData(ptBr);
 
@@ -41,7 +44,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SelectToggleComponent,
     MenuComponent,
     DashboardComponent,
-    HeaderComponent
+    HeaderComponent,
+    LeadsFormComponent,
+    BackButtonDirective
   ],
   imports: [
     BrowserModule,
@@ -65,7 +70,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     MatSidenavModule,
     MatListModule,
     MatMenuModule,
-    Ng5SliderModule
+    MatFormFieldModule,
+    Ng5SliderModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

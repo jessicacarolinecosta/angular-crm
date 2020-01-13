@@ -15,6 +15,19 @@
         "new": "Novo"
     },
     "comum": {
-        "copyright": "Desenvolvido por: Jéssica Costa"
+        "copyright": "Desenvolvido por: Jéssica Costa",
+        "cancel": "Cancelar",
+        "save": "Salvar",
+        "field-required": "Campo obrigatório",
+        "email-not-valid": "Email inválido"
+    },
+    "leads": {
+        "add-lead": "Adicionar Leads",
+        "name": "Nome",
+        "email": "Email",
+        "phone": "Telefone",
+        "state": "Estado",
+        "city": "Cidade",
+        "obs": "Observações"
     }
 }
