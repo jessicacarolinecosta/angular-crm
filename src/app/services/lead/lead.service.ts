@@ -34,4 +34,14 @@ export class LeadService {
       headers: this.headers
     });
   }
+
+  delete(id: string): Observable<any> {
+    const params = {
+      id: id  
+    };
+
+    return this.http.post(url + 'remove', params, {
+      headers: this.headers
+    });
+  }
 }

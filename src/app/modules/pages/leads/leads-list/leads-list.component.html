@@ -2,7 +2,7 @@
   
   <span class="title-holder">
     <h2 [translate]="'leads.lead-list'"></h2>
-    <button mat-raised-button color="primary"><em class="fa fa-plus"></em><span [translate]="'leads.new-lead'"></span></button>
+    <button mat-raised-button color="primary" routerLink="/leads/add"><em class="fa fa-plus"></em><span [translate]="'leads.new-lead'"></span></button>
   </span>
 
   <mat-form-field>
@@ -34,6 +34,13 @@
     <ng-container matColumnDef="city">
       <th mat-header-cell *matHeaderCellDef mat-sort-header><span [translate]="'leads.city'"></span></th>
       <td mat-cell *matCellDef="let element"> {{element.city ? element.city : '-'}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="_id">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header><span [translate]="''"></span></th>
+      <td mat-cell *matCellDef="let element"> 
+        <button mat-raised-button color="warn" (click)="delete(element)">X</button>
+      </td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -32,19 +32,19 @@
     <div class="grid-lg-6 grid-xs-12">
       <mat-form-field appearance="outline">
         <mat-label [translate]="'leads.state'"></mat-label>
-        <input matInput type="text" placeholder="{{'leads.state' | translate}}">
+        <input matInput type="text" formControlName="state" placeholder="{{'leads.state' | translate}}">
       </mat-form-field>
     </div>
     <div class="grid-lg-6 grid-xs-12">
       <mat-form-field appearance="outline">
         <mat-label [translate]="'leads.city'"></mat-label>
-        <input matInput type="text" placeholder="{{'leads.city' | translate}}">
+        <input matInput type="text" formControlName="city" placeholder="{{'leads.city' | translate}}">
       </mat-form-field>
     </div>
     <div class="grid-lg-12">
       <mat-form-field appearance="outline">
         <mat-label [translate]="'leads.obs'"></mat-label>
-        <textarea matInput placeholder="{{'leads.obs' | translate}}"></textarea>
+        <textarea matInput formControlName="obs" placeholder="{{'leads.obs' | translate}}"></textarea>
       </mat-form-field>
     </div>
     <div class="grid-lg-6">
