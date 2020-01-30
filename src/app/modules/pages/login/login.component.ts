@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../../../services/user/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-crm',
@@ -63,9 +65,21 @@ export class LoginComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  login: string;
+  password: string;
+
+  constructor(private userService: UserService, private router: Router) { }
 
   ngOnInit() {
   }
 
+  callLogin() {
+    this.userService.login(this.login, this.password)
+      .subscribe(data => {
+        localStorage.setItem('token', data.token);
+        this.router.navigate(['dashboard']);
+      }, error => {
+        alert(error.error.erro);
+      },);
+  }
 }

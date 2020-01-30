@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LeadService } from '../../../../services/lead/lead.service';
 
 @Component({
   selector: 'app-leads-form',
@@ -10,7 +11,7 @@ export class LeadsFormComponent implements OnInit {
   leadsForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private leadService: LeadService) { }
 
   ngOnInit() {
       this.leadsForm = this.formBuilder.group({
@@ -29,7 +30,14 @@ export class LeadsFormComponent implements OnInit {
         return;
     }
 
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.leadsForm.value, null, 4));
+    const params = this.leadsForm.value;
+
+    this.leadService.insert(params.name, params.email, params.phone, params.state, params.city, params.obs)
+      .subscribe(data => {
+        alert("Inclusão realizada com sucesso");
+      }, error => {
+        alert(error.error.erro);
+      },);
   }
 
   onReset() {
